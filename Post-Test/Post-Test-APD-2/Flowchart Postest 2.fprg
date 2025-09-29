@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Flowchart Postest 2"/>
+        <attribute name="authors" value="jovan"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-23 10:14:54 PM"/>
+        <attribute name="created" value="am92YW47Sk9WQU47MjAyNS0wOS0yMzswOTo1MDo0NiBQTTsyMjE1"/>
+        <attribute name="edited" value="am92YW47Sk9WQU47MjAyNS0wOS0yMzsxMDoxNDo1NCBQTTsxOzIzMTQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Nama, Alamat" type="String" array="False" size=""/>
+            <declare name="Umur, NoTelp, NoATM, PwATM" type="Integer" array="False" size=""/>
+            <declare name="Isumur" type="Boolean" array="False" size=""/>
+            <declare name="TinggiBadan" type="Real" array="False" size=""/>
+            <output expression="&quot;REGISTRASI UANG KAGET AHMADRAFI&quot;" newline="True"/>
+            <output expression="&quot;Masukan Nama Anda:&quot;" newline="True"/>
+            <input variable="Nama"/>
+            <output expression="&quot;Masukan tinggi badan anda dalam cm:&quot;" newline="True"/>
+            <input variable="TinggiBadan"/>
+            <output expression="&quot;Masukan umur anda:&quot;" newline="True"/>
+            <input variable="Umur"/>
+            <output expression="&quot;Masukan Nomor telpon anda:&quot;" newline="True"/>
+            <input variable="NoTelp"/>
+            <output expression="&quot;Masukan Nomor ATM anda:&quot;" newline="True"/>
+            <input variable="NoATM"/>
+            <output expression="&quot;Masukan passsword ATM anda:&quot;" newline="True"/>
+            <input variable="PwATM"/>
+            <output expression="&quot;Masukan alamat anda:&quot;" newline="True"/>
+            <input variable="Alamat"/>
+            <assign variable="IsUmur" expression="Umur &gt;=17"/>
+            <output expression="&quot;DATA ANDA SUDAH TERREGISTRASI&quot;" newline="True"/>
+            <output expression="&quot;Nama Anda:&quot;" newline="True"/>
+            <output expression="Nama" newline="True"/>
+            <output expression="&quot;Tiggi badan anda:&quot;" newline="True"/>
+            <output expression="TinggiBadan" newline="True"/>
+            <output expression="&quot;Umur anda:&quot;" newline="True"/>
+            <output expression="Umur" newline="True"/>
+            <output expression="&quot;Suah cukup umur?&quot;" newline="True"/>
+            <output expression="IsUmur" newline="True"/>
+            <output expression="&quot;Nomor telpon anda:&quot;" newline="True"/>
+            <output expression="NoTelp" newline="True"/>
+            <output expression="&quot;Nomor ATM anda:&quot;" newline="True"/>
+            <output expression="NoATM" newline="True"/>
+            <output expression="&quot;Password ATM anda:&quot;" newline="True"/>
+            <output expression="PwATM" newline="True"/>
+            <output expression="&quot;Alamat tempat tinggal anda:&quot;" newline="True"/>
+            <output expression="Alamat" newline="True"/>
+            <output expression="&quot;TERIMAKASIH TELAH MELAKUKAN REGISTRASI&quot;" newline="True"/>
+            <output expression="&quot;ANDA MENAPAT UANG KAGET SEBESAR 1 MILIYAR RUPIAH&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
