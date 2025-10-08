@@ -1,4 +1,4 @@
-import os #import os untuk membersihkan layar, dan os.system nya ada di baris 84
+import os #import os untuk membersihkan layar, dan os.system nya ada di baris 87
           #agar dapat menampilkan pesan di terminal terlebih dahulu sebelum membersihkan layar
 
 nama = "Jovan"
@@ -80,13 +80,14 @@ while perulangan < max_perulangan:
         print("====="*14)
         if perulangan == max_perulangan:
             print("====="*14)
+            print("ANDA GAGAL LOGIN!!!")
             print("ANDA INI MAU MEMBOBOL DATA USER YA!!")
             print("====="*14)
         elif coba_lagi.lower() == "y":
             os.system ("cls")
-            continue
         else:
             print("====="*14)
-            print("===============ANDA GAGAL LOGIN, SILAHKAN COBA LAGI NANTI===============")
+            print("TERIMA KASIH TELAH MENGUNJUNGI RENTAL MOBIL CABANG PATI CINTA DAMAI")
             print("====="*14)
             break
+        
