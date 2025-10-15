@@ -47,8 +47,10 @@ while ulang:
                     print(f"{nomor}. Nama Tanaman : {i[0]}")
                     print(f"   Jenis Tanaman : {i[1]}")
                     print(f"   Kondisi Tanaman : {i[2]}")
-                    print(f"   Lama Perawatan : {i[3]}")
-                    print(f"   Usia Tanaman : {i[4]}")
+                    print(f"   Usia Tanaman : {i[3]}")
+                    print(f"   Status Usia Tanaman : {i[4]}")
+                    print(f"   Pupuk dan Vitamin: {i[5]}")
+                    print(f"   Status Penyiraman: {i[6]}")
                     print("-"*58)
                     nomor += 1
                 input("Tekan Enter Untuk Kembali ke Menu Utama")
@@ -63,7 +65,9 @@ while ulang:
                 kondisi = input("Masukkan Kondisi Tanaman : ")
                 usia = input("Masukkan Usia Tanaman : ")
                 status = input("Masukkan Status Usia Tanaman : ")
-                tanaman_baru = [nama, jenis, kondisi, usia, status]
+                pukvit = input("Masukan Status Pemupukan dan Vitamin : ")
+                penyiraman = input("Masukan Status Penyiraman : ")
+                tanaman_baru = [nama, jenis, kondisi, usia, status, pukvit, penyiraman]
                 tanaman.append(tanaman_baru)
                 print(f"Tanaman {nama} Berhasil Ditambahkan!")
                 input("Tekan Enter Untuk Kembali ke Menu Utama")
@@ -78,19 +82,23 @@ while ulang:
                     print(f"{nomor}. Nama Tanaman : {i[0]}")
                     print(f"   Jenis Tanaman : {i[1]}")
                     print(f"   Kondisi Tanaman : {i[2]}")
-                    print(f"   Lama Perawatan : {i[3]}")
-                    print(f"   Usia Tanaman : {i[4]}")
+                    print(f"   Usia Tanaman : {i[3]}")
+                    print(f"   Status Usia Tanaman : {i[4]}")
+                    print(f"   Pupuk dan Vitamin: {i[5]}")
+                    print(f"   Status Penyiraman: {i[6]}")
                     print("-"*58)
                     nomor += 1
                 pilih_tanaman = int(input("Pilih Nomor Tanaman yang Ingin Diupdate : "))
                 if pilih_tanaman <= len(tanaman):
                     index = pilih_tanaman - 1
                     print(f"Anda Memilih Tanaman {tanaman[index][0]}")
-                    tanaman[index][0]= input("Masukkan Nama Tanaman Baru (tekan enter kalau tidak ingin mengubah) : ")
-                    tanaman[index][1] = input("Masukkan Jenis Tanaman Baru (tekan enter kalau tidak ingin mengubah) : ")
-                    tanaman[index][2] = input("Masukkan Kondisi Tanaman Baru (tekan enter kalau tidak ingin mengubah) : ")
-                    tanaman[index][3] = input("Masukkan Usia Tanaman Baru (tekan enter kalau tidak ingin mengubah) : ")
-                    tanaman[index][4] = input("Masukkan Status Usia Tanaman Baru (tekan enter kalau tidak ingin mengubah) : ")
+                    tanaman[index][0]= input("Masukkan Nama Tanaman Baru : ")
+                    tanaman[index][1] = input("Masukkan Jenis Tanaman Baru : ")
+                    tanaman[index][2] = input("Masukkan Kondisi Tanaman Baru : ")
+                    tanaman[index][3] = input("Masukkan Usia Tanaman Baru : ")
+                    tanaman[index][4] = input("Masukkan Status Usia Tanaman Baru : ")
+                    tanaman[index][5] = input("Masukkan Status Pupuk dan Vitamin Tanaman Baru : ")
+                    tanaman[index][6] = input("Masukkan Status Penyiraman Tanaman Baru : " )
                     print(f"Data Tanaman {tanaman[index][0]} Berhasil Diupdate!")
                     input("Tekan Enter Untuk Kembali ke Menu Utama")
                     os.system('cls' if os.name == 'nt' else 'clear')
@@ -108,8 +116,10 @@ while ulang:
                     print(f"{nomor}. Nama Tanaman : {i[0]}")
                     print(f"   Jenis Tanaman : {i[1]}")
                     print(f"   Kondisi Tanaman : {i[2]}")
-                    print(f"   Lama Perawatan : {i[3]}")
-                    print(f"   Usia Tanaman : {i[4]}")
+                    print(f"   Usia Tanaman : {i[3]}")
+                    print(f"   Status Usia Tanaman : {i[4]}")
+                    print(f"   Pupuk dan Vitamin: {i[5]}")
+                    print(f"   Status Penyiraman: {i[6]}")
                     print("-"*58)
                     nomor += 1
                 pilih_tanaman = int(input("Pilih Nomor Tanaman yang Ingin Dihapus : "))
@@ -129,14 +139,16 @@ while ulang:
                 print("="*58)
                 print("==========Stok/Pemberian Pupuk, Stok/Pemberian Vitamin, dan Pemberian Air di Samarendah Garden==========")
                 print("="*58)
-                print(f"Stok Pupuk : {stok_PV[0]}")
-                print(f"Stok Vitamin : {stok_PV[1]}")
                 while True:
+                    print("="*58)   
                     print("1. Tambah Stok Pupuk")
                     print("2. Tambah Stok Vitamin")
                     print("3. Beri Pupuk dan Vitamin ke Tanaman")
                     print("4. Beri Air ke Tanaman")
                     print("5. Kembali ke Menu Utama")
+                    print(f"Stok Pupuk : {stok_PV[0]}")
+                    print(f"Stok Vitamin : {stok_PV[1]}")
+                    print("="*58)   
                     pilihan5 = input("Pilih Menu (1-5) : ")
                     if pilihan5 == "1":
                         tambah_pupuk = int(input("Masukkan Jumlah Pupuk yang Ingin Ditambahkan : "))
@@ -152,6 +164,17 @@ while ulang:
                         os.system('cls' if os.name == 'nt' else 'clear')
                     elif pilihan5 == "3":
                         if stok_PV[0] > 0 and stok_PV[1] > 0:
+                            nomor = 1
+                            for i in (tanaman):
+                                print(f"{nomor}. Nama Tanaman : {i[0]}")
+                                print(f"   Jenis Tanaman : {i[1]}")
+                                print(f"   Kondisi Tanaman : {i[2]}")
+                                print(f"   Usia Tanaman : {i[3]}")
+                                print(f"   Status Usia Tanaman : {i[4]}")
+                                print(f"   Pupuk dan Vitamin: {i[5]}")
+                                print(f"   Status Penyiraman: {i[6]}")
+                                print("-"*58)
+                                nomor += 1
                             pilih_tanaman = int(input("Pilih Nomor Tanaman yang Ingin Diberi Pupuk dan Vitamin : "))
                             if pilih_tanaman <= len(tanaman):
                                 index = pilih_tanaman - 1 
@@ -171,6 +194,17 @@ while ulang:
                                 input("Tekan Enter Untuk Kembali ke Menu Utama")
                                 os.system('cls' if os.name == 'nt' else 'clear')
                     elif pilihan5 == "4":
+                        nomor = 1
+                        for i in (tanaman):
+                            print(f"{nomor}. Nama Tanaman : {i[0]}")
+                            print(f"   Jenis Tanaman : {i[1]}")
+                            print(f"   Kondisi Tanaman : {i[2]}")
+                            print(f"   Usia Tanaman : {i[3]}")
+                            print(f"   Status Usia Tanaman : {i[4]}")
+                            print(f"   Pupuk dan Vitamin: {i[5]}")
+                            print(f"   Status Penyiraman: {i[6]}")
+                            print("-"*58)
+                            nomor += 1
                         pilih_tanaman = int(input("Pilih Nomor Tanaman yang Ingin Disiram : "))
                         if pilih_tanaman <= len(tanaman):
                             index = pilih_tanaman - 1 
@@ -195,6 +229,8 @@ while ulang:
                 print("="*58)
                 if len(laporan) == 0:
                     print("Belum Ada Laporan Masalah")
+                    input("Tekan Enter Untuk Kembali ke Menu Utama")
+                    os.system('cls' if os.name == 'nt' else 'clear')
                 else:
                     nomor = 1
                     for i in laporan:
@@ -243,8 +279,10 @@ while ulang:
                     print(f"{nomor}. Nama Tanaman : {i[0]}")
                     print(f"   Jenis Tanaman : {i[1]}")
                     print(f"   Kondisi Tanaman : {i[2]}")
-                    print(f"   Lama Perawatan : {i[3]}")
-                    print(f"   Usia Tanaman : {i[4]}")
+                    print(f"   Usia Tanaman : {i[3]}")
+                    print(f"   Status Usia Tanaman : {i[4]}")
+                    print(f"   Pupuk dan Vitamin: {i[5]}")
+                    print(f"   Status Penyiraman: {i[6]}")
                     print("-"*58)
                     nomor += 1
                 input("Tekan Enter Untuk Kembali ke Menu Utama")
