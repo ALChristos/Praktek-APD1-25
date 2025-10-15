@@ -330,8 +330,6 @@ while ulang:
 
 
 
-                    
-                
 
                         
 
