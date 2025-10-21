@@ -1,8 +1,8 @@
 import os
 
 akun = {
-    "akun admin" : ["1", "1"],
-    "akun member" : ["2", "2"],
+    "akun admin" : ["Admin", "atmin123"],
+    "akun member" : ["User", "sayangatmin"],
 }
 
 tanaman = [
