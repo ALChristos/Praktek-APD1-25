@@ -144,12 +144,14 @@
 # except ValueError as a:
 #     print(a)
     
-# try:
-#     pw = input("pw : ")
-#     if len(pw) < 8:
-#         raise ValueError("pw tak boleh kurang dari 8 digit")
-# except ValueError as a:
-#     print(a)
+try:
+    pw = input("pw : ")
+    if len(pw) < 8:
+     raise ValueError("pw tak boleh kurang dari 8 digit")
+except ValueError as a:
+    print(a)
+    
+    
     
 
     
