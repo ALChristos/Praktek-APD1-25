@@ -6,8 +6,8 @@ from Pack_Member.Menu_M import *
 from Pack_Member.Pilihan_M import *
 
 akun = {
-    "akun admin": ["1", "1"],
-    "akun member": ["2", "2"],
+    "akun admin": ["Admin", "atmin123"],
+    "akun member": ["User", "sayangatmin"],
 }
 
 tanaman = [
